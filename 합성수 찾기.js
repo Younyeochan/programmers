@@ -13,16 +13,40 @@ n	result
 15 이하 합성수는 4, 6, 8, 9, 10, 12, 14, 15 로 8개입니다. 따라서 8을 return합니다.
 
 약수 갯수가 3개 이상?은 뭔소리지
-음
+음 약수가 3개이상인 애들만 찾아서 넣어야함
+4 / 1 2 4 임 
 
 */ 
 
 let n = 10
 
 const solution = (n) => {
-    let arr = Array(n).fill(1).map((v,i) => i + 1)
+    let number = 0;
 
-    return arr.filter((a, i) => i % a === 0)
+    for(let i = 1; i <= n; i++) {
+        let num = 0;
+        for(let j = 0; j <= n; j++) {
+            i % j === 0 ? num += 1 : num += 0;
+        }
+        num > 2 ? number += 1 : number += 0;
+    }
+
+    return number
 }
 
 console.log(solution(n));
+
+/*
+메소드로 푼 사람
+function solution(n) {
+  return Array(n).fill().map((_, i) => i + 1)
+    .filter((i) => {
+      let cnt = 0;
+      for (let j = 1; j <= i; j++) {
+        if (i % j === 0) cnt++;
+      }
+      return cnt >= 3;
+    }).length;
+}
+
+*/
