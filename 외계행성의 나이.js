@@ -1,5 +1,5 @@
 /*
-우주여행을 하던 머쓱이는 엔진 고장으로 PROGRAMMERS-962 행성에 불시착하게 됐습니다. 
+우주여행을 하던 머쓱이는 엔진 고장으로 PROGRAMMERS-962 행성에 불시착하게 됐습니다.
 입국심사에서 나이를 말해야 하는데, PROGRAMMERS-962 행성에서는 나이를 알파벳으로 말하고 있습니다. 
 a는 0, b는 1, c는 2, ..., j는 9입니다. 
 예를 들어 23살은 cd, 51살은 fb로 표현합니다. 
@@ -19,30 +19,10 @@ age가 100이므로 "baa"를 return합니다.
 */ 
 
 let age = 23;
-// let obj = {
-//     0:a,
-//     1:b,
-//     2:c,
-//     3:d,
-//     4:e,
-//     5:f,
-//     6:g,
-//     7:h,
-//     8:i,
-//     9:j
-// }
 
 const solution = (age) => {
-    // let obj = { 0:'a', 1:'b', 2:'c', 3:'d', 4:'e', 5:'f', 6:'g', 7:'h', 8:'i', 9:'j'}
-    // let num = (age + '').split('').map(Number);
+    let str = String(age).split('');
 
-    // return num.map(a => obj[a]).join('');
-    // 근데 이게 뭔지 모르겠음...
-    return age.toString().split("").map((v) => "abcdefghij"[v]).join("");
-}
-
-// map에 한번에 해도 됨;;
-
-
+};
 
 console.log(solution(age));
