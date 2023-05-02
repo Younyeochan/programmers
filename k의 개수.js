@@ -14,19 +14,22 @@ i	j	k	result
 10부터 50까지 5는 15, 25, 35, 45, 50 총 5번 등장합니다. 따라서 5를 return 합니다.
 입출력 예 #3
 3부터 10까지 2는 한 번도 등장하지 않으므로 0을 return 합니다.
+
+
 */ 
 
-let i = 1;
-let j = 13;
-let k = 1;
+// 이건 나오는데..
+// let i = 1;
+// let j = 13;
+// let k = 1;
+// 이게 안됨 수정 필요 	3, 10, 2
+let i = 3;
+let j = 10;
+let k = 2;
 
-// return Array(j).fill().map((a, i) => Number(i + 1)).filter(a => a === k).length; 1이 포함되면 다걸러야함
+// 생각해보면 그렇다 랭스만큼 쭉뽑아내는 거니깐 3부터 나오더라도 10개가 뽑힌다 그래서 -i를 하고 +1을해서 배열 갯수를 맞춘다.
 const solution = (i, j, k) => {
-    let arr = Array(j).fill().map((a, i) => i + 1);
-    let kString = k.toString();
-    let result = arr.map(a => a.toString().indexOf(k) == 0);
-
-    return result
+   return [...Array(j - i + 1).fill(0).map((a, index) => (i + index).toString()).join('')].filter(a => a == k).length;
 }
 
 console.log(solution(i, j, k));
