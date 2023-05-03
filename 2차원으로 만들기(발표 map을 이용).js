@@ -23,22 +23,25 @@ num_list가 [100, 95, 2, 4, 5, 6, 18, 33, 948] 로 길이가 9이고 n이 3이�
 let num_list = [1, 2, 3, 4, 5, 6, 7, 8];
 let n = 2
 
-const solution = (num_list, n) => {
-    let arr = [];
-    // while 문을 이용해서 랭스만큼 참이 될때 까지 돌림
-    while(num_list.length) {
-        arr.push(num_list.splice(0, n));
-    }
+// const solution = (num_list, n) => {
+//     let arr = [];
+//     // while 문을 이용해서 랭스만큼 참이 될때 까지 돌림
+//     while(num_list.length) {
+//         arr.push(num_list.splice(0, n));
+//     }
 
-    return arr
+//     return arr
+// }
+
+
+
+function solution(num_list, n) {
+    return Array(num_list.length / n).fill([]).map(() => num_list.splice(0, n))
 }
 
 console.log(solution(num_list, n));
 
 /*
-function solution(num_list, n) {
-    return Array(num_list.length / n).fill([]).map(() => num_list.splice(0, n))
-}
 
 메소드로 이렇게해야하는데..
 */ 

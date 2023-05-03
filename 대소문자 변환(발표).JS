@@ -22,7 +22,7 @@ function solution(my_string){
 
 
 
-// 맵으로 할 수 있다. 해봐
+// 맵으로 해보기
 const solution02 = (my_string) => {
     return [...my_string].map(x => x === x.toUpperCase()? x.toLowerCase() : x.toUpperCase()).join('');
 }

@@ -34,7 +34,7 @@ const solution = (numbers, direction) => {
     } else {
         numbers.push(numbers.shift());
     }
-굳이 변수를 선언하지 않아도 됫었음..
+굳이 변수를 선언하지 않아도 됫었음..1
 
 삼항 연산자로 선언해서 할 수 있음..
  
