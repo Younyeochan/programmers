@@ -12,12 +12,13 @@ let my_string = "cccCCC"
 function solution(my_string){
     let str = ''
 
-	for(let x of my_string){
+	for(const x of my_string){
 		if(x === x.toUpperCase()){
     		str += x.toLowerCase();
     	} else str += x.toUpperCase();
     }
     return str;
+    // for of 인수랑 for 인수의 차이점을 알아야함.
 }
 
 
@@ -28,4 +29,4 @@ const solution02 = (my_string) => {
     return [...my_string].map(x => x === x.toUpperCase()? x.toLowerCase() : x.toUpperCase()).join('');
 }
 
-console.log(solution02(my_string));
+console.log(solution(my_string));
