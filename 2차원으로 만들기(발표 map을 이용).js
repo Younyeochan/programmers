@@ -33,15 +33,9 @@ let n = 2
 //     return arr
 // }
 
-
-
 function solution(num_list, n) {
+    // 원소들을 앞에서부터 n개씩 나눠 2차원 배열로 변경? 그럼 배열 자체에 계속 짜르면 되지 않을까? map 으로 모든 원소를 돌리며 원래 배열에서 앞부터 잘라서 넣으면됨
     return Array(num_list.length / n).fill([]).map(() => num_list.splice(0, n))
 }
 
 console.log(solution(num_list, n));
-
-/*
-
-메소드로 이렇게해야하는데..
-*/ 

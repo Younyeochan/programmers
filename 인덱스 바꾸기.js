@@ -22,6 +22,7 @@ let num2 = 6;
 
 const solution = (my_string, num1, num2) => {
     let str = my_string.split('');
+    // (시작인덱스, 종료 인덱스)
     let str01 = my_string.slice(num1, num1 + 1);
     let str02 = my_string.slice(num2, num2 + 1);
 

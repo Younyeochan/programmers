@@ -15,19 +15,33 @@ my_str	            n	result
 let my_str = "abc1Addfggg4556b"
 let n = 6
 
-const solution = (my_str, n) => {
-    arr = my_str.split('');
-    fnArr = [];
+// const solution = (my_str, n) => {
+//     const arr = [];
+  
+//     for (let i = 0; i < my_str.length; i += n) {
+//         arr.push(my_str.substring(i, i + n));
+//     }
+//     return arr;
+// }
 
-    for(let i = 0; i <= my_str.length; i++) {
-        if(i % n == 0) {
-            fnArr = arr.splice(0, n);
-        } else {
-            fnArr = arr.push();
-        }
+const solution = (my_str, n) => {
+    let arr = [];
+
+    for(let i=0; i < my_str.length; i += n) {
+        arr.push(my_str.slice(i, i+n));
     }
 
-   return fnArr
+    return arr
 }
 
 console.log(solution(my_str, n));
+
+
+
+/*
+보니깐 정규식으로 푼사람도있었음
+
+function solution(my_str, n) {
+  return my_str.match(new RegExp(`.{1,${n}}`, "g"));
+}
+*/ 

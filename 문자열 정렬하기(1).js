@@ -9,11 +9,12 @@
 
 // let my_string = "hi12392";
 // let my_string = "p2o4i8gj2";
-let my_string = "abcde0";
+let my_string = "hi12392";
 
 const solution = (my_string) => {
     let str = my_string.split('');
 
+    // return str.map(a => Number(a)).sort((a,b)=>a-b);
     return str.map(a => Number(a)).filter(a => a >= 0).sort((a,b)=>a-b);
 }
 

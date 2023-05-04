@@ -19,6 +19,7 @@ let n = 3;
 
 const solution = (n, numlist) => {
     // 쓸때없는 map을 돌렸다...
+    // 생각해보니 이미 numlist가 배열이기 때문에 배열을 그대로 필터로 원하는 값만 뽑으면 됫었음..
     // return numlist.map(a => a % n == 0 ? a : '' ).filter(a => a !== '');
     return numlist.filter(a => a % n == 0);
 };
