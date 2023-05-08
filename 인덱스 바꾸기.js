@@ -11,8 +11,6 @@ return 하도록 solution 함수를 완성해보세요.
 
 입출력 예 #2
 "I love you"의 3번째 인덱스 "o"와 " "(공백)을 바꾸면 "I l veoyou"입니다.
-
-
 */ 
 
 let my_string = "I love you";
