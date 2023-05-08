@@ -13,20 +13,22 @@ function solution(my_string){
     let str = ''
 
 	for(const x of my_string){
+        // x = 'a';
 		if(x === x.toUpperCase()){
     		str += x.toLowerCase();
     	} else str += x.toUpperCase();
     }
     return str;
-    // for of 인수랑 for 인수의 차이점을 알아야함.
 }
 
+// for of 찾
 
 
 // 맵으로 해보기
-const solution02 = (my_string) => {
-    // my_string.split('') 바꾸기
-    return [...my_string].map(x => x === x.toUpperCase()? x.toLowerCase() : x.toUpperCase()).join('');
-}
+// const solution02 = (my_string) => {
+//     // my_string.split('') 바꾸기
+//     // return [...my_string].map(x => x === x.toUpperCase()? x.toLowerCase() : x.toUpperCase()).join('');
+//     // return [...my_string].map(x => x === x.toUpperCase()?).join('');
+// }
 
 console.log(solution(my_string));

@@ -20,14 +20,24 @@ let num2 = 6;
 
 const solution = (my_string, num1, num2) => {
     let str = my_string.split('');
+
     // (시작인덱스, 종료 인덱스)
+    /*
+        배열메소드가 아닌 string 문자열을 잘라낸거임
+        String.prototype.slice()
+        slice() 메소드는 문자열의 일부를 추출하면서 새로운 문자열을 반환합니다.
+    */   
+    // let str01 = [...my_string].slice(num1, num1 + 1);
+    // let str02 = [...my_string].slice(num2, num2 + 1);
     let str01 = my_string.slice(num1, num1 + 1);
     let str02 = my_string.slice(num2, num2 + 1);
 
     str.splice(num2, 1, str01);
-    str.splice(num1, 1, str02)
+    str.splice(num1, 1, str02);
 
-    return str.join('');
+    console.log(typeof str01);
+
+    return str.join('')
 };
 // 너무 하드 코딩임 제대로 사용할 수 있도록... 해야함
 
